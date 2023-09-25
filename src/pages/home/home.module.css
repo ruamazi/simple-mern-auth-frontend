@@ -1,0 +1,37 @@
+.container {
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  margin-bottom: 18px;
+}
+.hero span {
+  font-weight: bold;
+  color: rgb(112, 193, 193);
+}
+.hero p {
+  margin-left: 15px;
+}
+.container h2 {
+  color: rgb(112, 193, 193);
+  margin-top: 10px;
+}
+.btmp {
+  margin-top: 10px;
+}
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+}
+.links a:hover {
+  text-shadow: 1px 1px 10px white;
+}
+ul li {
+  list-style-position: inside;
+}

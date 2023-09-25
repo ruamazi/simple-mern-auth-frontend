@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, transparent, white, transparent);
+  bottom: 1px;
+  left: 1px;
+  height: 1px;
+  width: 100%;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.links a {
+  text-decoration: none;
+  color: inherit;
+}
+.links a:hover {
+  color: aqua;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.logo:hover {
+  text-shadow: 1px 1px 10px white;
+}
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

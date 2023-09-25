@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 500px;
+  margin-top: 30px;
+}
+.container input {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.container button {
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-left: 5px solid rgba(255, 255, 255, 0.4);
+  border-right: 5px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+}
+.container button:hover {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 144, 142, 0.2),
+    transparent
+  );
+  cursor: pointer;
+}
+.errText {
+  color: rgb(208, 65, 65);
+  text-align: center;
+}
+.bottomTxt {
+  margin-top: 20px;
+}
+.bottomTxt a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: white;
+}
+.bottomTxt a:hover {
+  color: aqua;
+}
+@media (max-width: 600px) {
+  .container form {
+    width: 300px;
+  }
+}
