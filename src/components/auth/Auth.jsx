@@ -16,6 +16,7 @@ const Auth = ({ inorup }) => {
         import.meta.env.VITE_BACKEND_URL + "/api/auth/google",
         {
           method: "POST",
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },
