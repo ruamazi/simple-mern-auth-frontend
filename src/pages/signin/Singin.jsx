@@ -23,13 +23,16 @@ const Singin = () => {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const resp = await fetch("/api/auth/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(inputData),
-      });
+      const resp = await fetch(
+        import.meta.env.VITE_BACKEND_URL + "/api/auth/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(inputData),
+        }
+      );
       const data = await resp.json();
       if (data.statusCode === 404 || data.statusCode === 401) {
         dispatch(signInFailure(data));

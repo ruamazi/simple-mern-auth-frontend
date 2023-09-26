@@ -73,13 +73,18 @@ const Profile = () => {
     try {
       dispatch(updateUserStart());
 
-      const resp = await fetch(`/api/user/update/${currentUser._id}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const resp = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/update/${
+          currentUser._id
+        }`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await resp.json();
       if (data.success === false) {
         dispatch(updateUserFailure(data));
@@ -95,9 +100,14 @@ const Profile = () => {
   const handleDeleteUser = async () => {
     try {
       dispatch(deleteUserStart());
-      const resp = await fetch(`/api/user/delete/${currentUser._id}`, {
-        method: "DELETE",
-      });
+      const resp = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/delete/${
+          currentUser._id
+        }`,
+        {
+          method: "DELETE",
+        }
+      );
       const data = await resp.json();
       if (data.success === false) {
         dispatch(deleteUserFailure(data));
@@ -110,7 +120,7 @@ const Profile = () => {
   };
   const handleOut = async () => {
     try {
-      await fetch(`/api/auth/signout`, {
+      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signout`, {
         method: "GET",
       });
       dispatch(signOut());

@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Auth from "../../components/auth/Auth";
 
 const Signup = () => {
-  const backendURL = "http://localhost:3090/api/auth/signup";
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -24,13 +23,16 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     setIsCreated(false);
-    const resp = await fetch("/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const resp = await fetch(
+      import.meta.env.VITE_BACKEND_URL + "/api/auth/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
     const data = await resp.json();
     if (!data.success) {
       setError(true);
