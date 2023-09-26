@@ -1,4 +1,41 @@
 .container {
-  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 30px 50px;
+  background-color: rgb(23, 23, 23);
   margin-bottom: 30px;
+}
+.container h2 {
+  color: rgb(112, 193, 193);
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+ul li {
+  list-style-position: inside;
+}
+ol li {
+  list-style-position: inside;
+}
+.links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.links a {
+  font-style: none;
+  color: rgb(112, 193, 193);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.links a:hover {
+  color: white;
+  text-decoration: underline;
 }

@@ -26,7 +26,7 @@
   color: inherit;
 }
 .links a:hover {
-  color: aqua;
+  color: rgb(112, 193, 193);
 }
 .logo {
   font-size: 1.5rem;

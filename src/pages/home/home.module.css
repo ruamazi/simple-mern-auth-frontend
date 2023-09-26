@@ -1,7 +1,15 @@
 .container {
-  padding: 0px 50px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 30px 50px;
+  background-color: rgb(23, 23, 23);
+  margin-bottom: 30px;
 }
 .hero {
   margin-bottom: 18px;
@@ -16,21 +24,28 @@
 .container h2 {
   color: rgb(112, 193, 193);
   margin-top: 10px;
+  font-size: 1.3rem;
 }
 .btmp {
   margin-top: 10px;
 }
 .links {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
 }
-.links a {
-  text-decoration: none;
-  color: white;
+.links button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  background-color: rgb(59, 59, 59);
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
 }
-.links a:hover {
-  text-shadow: 1px 1px 10px white;
+.links button:hover {
+  background-color: transparent;
+  outline: 1px solid white;
 }
 ul li {
   list-style-position: inside;

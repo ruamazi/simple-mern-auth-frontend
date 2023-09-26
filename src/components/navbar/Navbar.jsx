@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>logo</div>
+      <div className={styles.logo}>AUTH</div>
       <div className={styles.links}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
